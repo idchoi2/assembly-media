@@ -1,0 +1,119 @@
+@import 'global';
+
+/*
+ * Base
+ * @file base.scss
+ * @author idchoi2@gmail.com
+ * @description 기본 정의
+*/
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}
+
+* { cursor: none;outline:none; }
+
+html {
+	-webkit-text-size-adjust: none;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+body {
+	font-family: $font-stack-default;
+	font-size: $font-size-md;
+	font-weight: 400 !important;
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	color: $color-black;
+	overflow-x: hidden;
+}
+
+a {
+	color: $color-black;
+}
+
+.ellipsis {
+	@include ellipsis();
+}
+
+.text-left {
+	text-align: left;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+
+.float-left {
+	float: left !important;
+}
+.float-right {
+	float: right !important;
+}
+
+
+
+
+
+/* Reset `button` and button-style `input` default styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+	background: none;
+	border: 0;
+	color: inherit;
+	/* cursor: default; */
+	font: inherit;
+	line-height: normal;
+	overflow: visible;
+	padding: 0;
+	-webkit-appearance: button; /* for input */
+	-webkit-user-select: none; /* for button */
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+.btn {
+	display: inline-block;
+	background: none;
+	border: none;
+	font-weight: 700;
+	text-align: left;
+}
+
+
+/*
+ * List
+*/
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+.loading {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: $color-white url("../img/loading.gif") no-repeat center center;
+	display: none;
+	@include transit(all, 1s, ease-out, 0s);
+}
+.loading.show {
+	display: block;
+}

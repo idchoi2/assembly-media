@@ -1,0 +1,139 @@
+@import 'global';
+
+.step-wrap {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 120px;
+	background: #252527;
+
+	.step-list-wrap {
+		text-align: center;
+
+		#step-list {
+			position: relative;
+			top: 30px;
+			display: inline-block;
+
+			li {
+				float: left;
+				height: 55px;
+
+				.btn-step {
+					display: inline-block;
+					width: 98px;
+					height: 55px;
+					@include transit(all, 1s, ease-out, 0s);
+				}
+				.btn-step.active {
+					width: 235px !important;
+				}
+				.btn-step.completed {
+					background: url("../img/btn-bottom-check.png") no-repeat center center;
+				}
+				.btn-step-1 {
+					background: url("../img/btn-bottom-step-1.png") no-repeat center center;
+				}
+				.btn-step-1.active {
+					background: url("../img/btn-bottom-step-1-acitve.png") no-repeat center center;
+				}
+				.btn-step-2 {
+					background: url("../img/btn-bottom-step-2.png") no-repeat center center;
+				}
+				.btn-step-2.active {
+					background: url("../img/btn-bottom-step-2-acitve.png") no-repeat center center;
+				}
+				.btn-step-3 {
+					background: url("../img/btn-bottom-step-3.png") no-repeat center center;
+				}
+				.btn-step-3.active {
+					background: url("../img/btn-bottom-step-3-acitve.png") no-repeat center center;
+				}
+				.btn-step-4 {
+					background: url("../img/btn-bottom-step-4.png") no-repeat center center;
+				}
+				.btn-step-4.active {
+					background: url("../img/btn-bottom-step-4-acitve.png") no-repeat center center;
+				}
+				.btn-step-5 {
+					background: url("../img/btn-bottom-step-5.png") no-repeat center center;
+				}
+				.btn-step-5.active {
+					background: url("../img/btn-bottom-step-5-acitve.png") no-repeat center center;
+				}
+				.btn-step-6 {
+					background: url("../img/btn-bottom-step-6.png") no-repeat center center;
+				}
+				.btn-step-6.active {
+					background: url("../img/btn-bottom-step-6-acitve.png") no-repeat center center;
+				}
+				.btn-step-7 {
+					background: url("../img/btn-bottom-step-7.png") no-repeat center center;
+				}
+				.btn-step-7.active {
+					background: url("../img/btn-bottom-step-7-acitve.png") no-repeat center center;
+				}
+				.btn-step-8 {
+					background: url("../img/btn-bottom-step-8.png") no-repeat center center;
+				}
+				.btn-step-8.active {
+					background: url("../img/btn-bottom-step-8-acitve.png") no-repeat center center;
+				}
+				.btn-step-9 {
+					background: url("../img/btn-bottom-step-9.png") no-repeat center center;
+				}
+				.btn-step-9.active {
+					background: url("../img/btn-bottom-step-9-acitve.png") no-repeat center center;
+				}
+				.btn-step-10 {
+					background: url("../img/btn-bottom-step-10.png") no-repeat center center;
+				}
+				.btn-step-10.active {
+					background: url("../img/btn-bottom-step-10-acitve.png") no-repeat center center;
+				}
+				.btn-step-11 {
+					background: url("../img/btn-bottom-step-11.png") no-repeat center center;
+				}
+				.btn-step-11.active {
+					background: url("../img/btn-bottom-step-11-acitve.png") no-repeat center center;
+				}
+				.btn-step-12 {
+					background: url("../img/btn-bottom-step-12.png") no-repeat center center;
+				}
+				.btn-step-12.active {
+					background: url("../img/btn-bottom-step-12-acitve.png") no-repeat center center;
+				}
+				.btn-step-13 {
+					background: url("../img/btn-bottom-step-13.png") no-repeat center center;
+				}
+				.btn-step-13.active {
+					background: url("../img/btn-bottom-step-13-acitve.png") no-repeat center center;
+				}
+				.btn-step-14 {
+					background: url("../img/btn-bottom-step-14.png") no-repeat center center;
+				}
+				.btn-step-14.active {
+					background: url("../img/btn-bottom-step-14-acitve.png") no-repeat center center;
+				}
+				.btn-step-15 {
+					background: url("../img/btn-bottom-step-15.png") no-repeat center center;
+				}
+				.btn-step-15.active {
+					background: url("../img/btn-bottom-step-15-acitve.png") no-repeat center center;
+				}
+			}
+			li.step-start {
+				width: 60px;
+				background: url("../img/icon-bottom-left.png") no-repeat center center;
+			}
+			li.step-end {
+				width: 60px;
+				background: url("../img/icon-bottom-right.png") no-repeat center center;
+			}
+
+
+
+		}
+	}
+}

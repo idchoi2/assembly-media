@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="assemblyKioskApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="assemblyKioskApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="assemblyKioskApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="assemblyKioskApp" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="국회 미디어">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta name="author" content="Rebel9" />
+	<meta name="robots" content="noindex, nofollow" />
+	<title>국회 미디어</title>
+
+
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+	<link rel="stylesheet" href="vendor/css/style.css">
+	<!-- CSS -->
+
+
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="vendor/js/script.js"></script>
+	<script src="app.js"></script>
+
+
+
+</head>
+<body ng-controller="MainCtrl" ng-init="init()">
+<div id="wrapper">
+
+
+
+
+	<div class="page" id="page-1" ng-show="curPage === 1">
+		<!-- 시작 버튼 -->
+		<div class="btn-start-wrap">
+			<button type="button" class="btn btn-start" ng-click="GoPage(2, 1000)"></button>
+		</div>
+		<!-- //시작 버튼 -->
+	</div>
+
+
+
+	<div class="page" id="page-2" ng-show="curPage === 2">
+
+
+
+		<div class="q-outer-wrap q-outer-{{curStep}}">
+
+
+			<!-- 질문 -->
+			<div class="q-wrap q-wrap-{{curStep}}" ng-class="{'load' : isQLoad}" ng-show="!isFinished">
+
+			</div>
+			<!-- //질문 -->
+
+
+			<!-- 답변 버튼 -->
+			<div class="a-wrap" ng-class="{'load' : isALoad}" ng-show="!isFinished">
+				<div class="answer-y-wrap">
+					<button type="button" class="btn btn-answer btn-answer-y" ng-click="SetAnswer('yes');" ng-class="{'set' : answer === 'yes'}"></button>
+				</div>
+				<div class="answer-n-wrap">
+					<button type="button" class="btn btn-answer btn-answer-n" ng-click="SetAnswer('no');" ng-class="{'set' : answer === 'no'}"></button>
+				</div>
+			</div>
+			<!-- //답변 버튼 -->
+
+
+			<!-- 결과 -->
+			<div class="r-wrap r-wrap-{{resultNo}}" ng-show="isFinished">
+
+			</div>
+			<!-- //결과 -->
+
+
+			<div class="restart-btn-wrap" ng-show="isFinished">
+				<button type="button" class="btn btn-restart" ng-click="GoHome(1)"></button>
+			</div>
+			<div class="home-btn-wrap">
+				<button type="button" class="btn btn-home" ng-click="GoHome()"></button>
+			</div>
+			<div class="next-btn-wrap" ng-show="!isFinished">
+				<button type="button" class="btn btn-next" ng-click="GoNext()" ng-disabled="!answer || isClick"></button>
+			</div>
+		</div>
+
+
+
+
+		<!-- 현재 단계 표시-->
+		<div class="step-wrap">
+			<div class="step-list-wrap">
+				<ul id="step-list">
+					<li class="step-start"></li>
+					<li ng-repeat="step in stepSts track by $index"><button type="button" class="btn btn-step btn-step-{{ $index + 1 }}" ng-click="GoStep($index)" ng-class="{'active' : curStep === ($index + 1), 'completed': stepSts[$index] !== null}" ng-disabled="isFinished || (stepSts[$index] === 0)"></button></li>
+					<li class="step-end"></li>
+				</ul>
+			</div>
+		</div>
+		<!-- //현재 단계 표시-->
+	</div>
+
+
+
+	<div class="loading" ng-class="{'show' : isLoading}"></div>
+</div>
+</body>
+</html>

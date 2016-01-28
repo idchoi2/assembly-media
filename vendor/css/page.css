@@ -1,0 +1,247 @@
+@charset "UTF-8";
+/*
+ * Global
+ * @file global.scss
+ * @author idchoi2@gmail.com
+ * @description 국회미디어 변수 및 함수 정의
+*/
+/*
+ * Layout
+*/
+/*
+ * Font
+*/
+/*
+ * Color
+*/
+/*
+ * Misc
+*/
+/*
+ * Base
+ * @file page.scss
+ * @author idchoi2@gmail.com
+ * @description Page 정의
+*/
+.page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+#page-1 {
+  background: url("../img/bg-intro.png") no-repeat left top; }
+  #page-1 .btn-start-wrap {
+    width: 649px;
+    height: 260px;
+    position: absolute;
+    top: 718px;
+    left: 880px;
+    overflow: hidden; }
+  #page-1 .btn-start {
+    width: 649px;
+    height: 260px;
+    background: url("../img/btn-start.png") no-repeat right top;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -moz-transition: all 0.3s ease-out 0s;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+    behavior: url(/vendor/css/boxsizing.htc); }
+  #page-1 .btn-start:active {
+    top: -71px;
+    left: 71px; }
+
+#page-2 .q-outer-wrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -moz-transition: all 1s ease-out 0s;
+  -webkit-transition: all 1s ease-out 0s;
+  -o-transition: all 1s ease-out 0s;
+  -ms-transition: all 1s ease-out 0s;
+  transition: all 1s ease-out 0s;
+  behavior: url(/vendor/css/boxsizing.htc); }
+  #page-2 .q-outer-wrap .a-wrap {
+    width: 1440px;
+    height: 860px;
+    position: absolute;
+    right: -1440px;
+    top: -860px;
+    -moz-transition: all 0.5s ease-out 0s;
+    -webkit-transition: all 0.5s ease-out 0s;
+    -o-transition: all 0.5s ease-out 0s;
+    -ms-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s;
+    behavior: url(/vendor/css/boxsizing.htc);
+    background: url("../img/bg-answer.png") no-repeat right top 258px; }
+    #page-2 .q-outer-wrap .a-wrap .answer-y-wrap {
+      width: 680px;
+      height: 290px;
+      position: absolute;
+      top: 570px;
+      left: 0;
+      overflow: hidden; }
+      #page-2 .q-outer-wrap .a-wrap .answer-y-wrap .btn-answer-y {
+        width: 680px;
+        height: 290px;
+        background: url("../img/btn-answer-yes.png") no-repeat right bottom;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -moz-transition: all 0.3s ease-out 0s;
+        -webkit-transition: all 0.3s ease-out 0s;
+        -o-transition: all 0.3s ease-out 0s;
+        -ms-transition: all 0.3s ease-out 0s;
+        transition: all 0.3s ease-out 0s;
+        behavior: url(/vendor/css/boxsizing.htc); }
+      #page-2 .q-outer-wrap .a-wrap .answer-y-wrap .btn-answer-y.set {
+        top: -50px;
+        left: 50px; }
+    #page-2 .q-outer-wrap .a-wrap .answer-n-wrap {
+      width: 530px;
+      height: 290px;
+      position: absolute;
+      top: 570px;
+      left: 560px;
+      overflow: hidden; }
+      #page-2 .q-outer-wrap .a-wrap .answer-n-wrap .btn-answer-n {
+        width: 530px;
+        height: 290px;
+        background: url("../img/btn-answer-no.png") no-repeat left bottom;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -moz-transition: all 0.3s ease-out 0s;
+        -webkit-transition: all 0.3s ease-out 0s;
+        -o-transition: all 0.3s ease-out 0s;
+        -ms-transition: all 0.3s ease-out 0s;
+        transition: all 0.3s ease-out 0s;
+        behavior: url(/vendor/css/boxsizing.htc); }
+      #page-2 .q-outer-wrap .a-wrap .answer-n-wrap .btn-answer-n.set {
+        top: -50px;
+        left: 50px; }
+  #page-2 .q-outer-wrap .a-wrap.load {
+    right: 0;
+    top: 0; }
+  #page-2 .q-outer-wrap .home-btn-wrap {
+    width: 160px;
+    height: 377px;
+    position: fixed;
+    top: 570px;
+    left: 0;
+    background: url("../img/bg-btn-left-bottom.png") no-repeat right top; }
+    #page-2 .q-outer-wrap .home-btn-wrap .btn-home {
+      position: absolute;
+      bottom: 88px;
+      right: 0;
+      width: 80px;
+      height: 80px;
+      background: url("../img/btn-home.png") no-repeat right top; }
+  #page-2 .q-outer-wrap .next-btn-wrap {
+    width: 320px;
+    height: 330px;
+    position: fixed;
+    top: 435px;
+    right: -10px;
+    background: url("../img/bg-btn-right-bottom.png") no-repeat right top; }
+    #page-2 .q-outer-wrap .next-btn-wrap .btn-next {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 170px;
+      height: 170px;
+      background: url("../img/btn-next-active.png") no-repeat center center;
+      -moz-transition: all 0.5s ease-out 0s;
+      -webkit-transition: all 0.5s ease-out 0s;
+      -o-transition: all 0.5s ease-out 0s;
+      -ms-transition: all 0.5s ease-out 0s;
+      transition: all 0.5s ease-out 0s;
+      behavior: url(/vendor/css/boxsizing.htc);
+      -webkit-animation: btn-next-pulse 2s ease-out;
+      -webkit-animation-iteration-count: infinite; }
+    #page-2 .q-outer-wrap .next-btn-wrap .btn-next:disabled {
+      -webkit-animation: none;
+      background: url("../img/btn-next.png") no-repeat center center; }
+@-webkit-keyframes btn-next-pulse {
+  0% {
+    background: url("../img/btn-next.png") no-repeat center center; }
+  50% {
+    background: url("../img/btn-next-active.png") no-repeat center center; }
+  100% {
+    background: url("../img/btn-next.png") no-repeat center center; } }
+  #page-2 .q-outer-wrap .restart-btn-wrap {
+    width: 561px;
+    height: 170px;
+    position: fixed;
+    top: 790px;
+    left: 90px; }
+    #page-2 .q-outer-wrap .restart-btn-wrap .btn-restart {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 561px;
+      height: 170px;
+      background: url("../img/btn-restart.png") no-repeat right top; }
+  #page-2 .q-outer-wrap .r-wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  #page-2 .q-outer-wrap .r-wrap.r-wrap-1 {
+    background: url("../img/bg-result-1.png") no-repeat right top; }
+  #page-2 .q-outer-wrap .r-wrap.r-wrap-2 {
+    background: url("../img/bg-result-2.png") no-repeat right top; }
+  #page-2 .q-outer-wrap .r-wrap.r-wrap-3 {
+    background: url("../img/bg-result-3.png") no-repeat right top; }
+  #page-2 .q-outer-wrap .r-wrap.r-wrap-4 {
+    background: url("../img/bg-result-4.png") no-repeat right top; }
+  #page-2 .q-outer-wrap .r-wrap.r-wrap-5 {
+    background: url("../img/bg-result-5.png") no-repeat right top; }
+  #page-2 .q-outer-wrap .r-wrap.r-wrap-6 {
+    background: url("../img/bg-result-6.png") no-repeat right top; }
+  #page-2 .q-outer-wrap .r-wrap.r-wrap-7 {
+    background: url("../img/bg-result-7.png") no-repeat right top; }
+  #page-2 .q-outer-wrap .r-wrap.r-wrap-8 {
+    background: url("../img/bg-result-8.png") no-repeat right top; }
+  #page-2 .q-outer-wrap .r-wrap.r-wrap-9 {
+    background: url("../img/bg-result-9.png") no-repeat right top; }
+#page-2 .q-outer-wrap.q-outer-1 {
+  background: url("../img/bg-step-1.png") no-repeat right top; }
+#page-2 .q-outer-wrap.q-outer-2 {
+  background: url("../img/bg-step-2.png") no-repeat right top; }
+#page-2 .q-outer-wrap.q-outer-3 {
+  background: url("../img/bg-step-3.png") no-repeat right top; }
+#page-2 .q-outer-wrap.q-outer-4 {
+  background: url("../img/bg-step-4.png") no-repeat right top; }
+#page-2 .q-outer-wrap.q-outer-5 {
+  background: url("../img/bg-step-5.png") no-repeat right top; }
+#page-2 .q-outer-wrap.q-outer-6 {
+  background: url("../img/bg-step-6.png") no-repeat right top; }
+#page-2 .q-outer-wrap.q-outer-7 {
+  background: url("../img/bg-step-7.png") no-repeat right top; }
+#page-2 .q-outer-wrap.q-outer-8 {
+  background: url("../img/bg-step-8.png") no-repeat right top; }
+#page-2 .q-outer-wrap.q-outer-9 {
+  background: url("../img/bg-step-9.png") no-repeat right top; }
+#page-2 .q-outer-wrap.q-outer-10 {
+  background: url("../img/bg-step-10.png") no-repeat right top; }
+#page-2 .q-outer-wrap.q-outer-11 {
+  background: url("../img/bg-step-11.png") no-repeat right top; }
+#page-2 .q-outer-wrap.q-outer-12 {
+  background: url("../img/bg-step-12.png") no-repeat right top; }
+#page-2 .q-outer-wrap.q-outer-13 {
+  background: url("../img/bg-step-13.png") no-repeat right top; }
+#page-2 .q-outer-wrap.q-outer-14 {
+  background: url("../img/bg-step-14.png") no-repeat right top; }
+#page-2 .q-outer-wrap.q-outer-15 {
+  background: url("../img/bg-step-15.png") no-repeat right top; }
+
+/*# sourceMappingURL=page.css.map */

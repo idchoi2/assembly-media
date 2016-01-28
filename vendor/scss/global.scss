@@ -1,0 +1,73 @@
+/*
+ * Global
+ * @file global.scss
+ * @author idchoi2@gmail.com
+ * @description 국회미디어 변수 및 함수 정의
+*/
+
+/*
+ * Layout
+*/
+$width-default: 1920px;
+$height-default: 1080px;
+
+/*
+ * Font
+*/
+$font-stack-default: 'Nanum Barun Gothic', Dotum ,sans-serif;
+$font-stack-raleway: 'Raleway', 'Nanum Barun Gothic', Dotum ,sans-serif;
+$font-stack-clearsans: 'ClearSansRegular', sans-serif;
+$font-stack-clearsansbold: 'ClearSansBold', sans-serif;
+
+$font-size-xs: 12px;
+$font-size-sm: 13px;
+$font-size-md: 15px;
+$font-size-sl: 17px;
+$font-size-ml: 21px;
+$font-size-lg: 24px;
+$font-size-el: 30px;
+$font-size-xl: 40px;
+
+/*
+ * Color
+*/
+$color-white: #FFF;
+$color-black: #000;
+$color-gr-333: #333;
+$color-gr-666: #666;
+$color-gr-888: #888;
+$color-gr-999: #999;
+$color-gr-ccc: #CCC;
+$color-red: #CF1D1D;
+$color-red-2: #DE0000;
+
+/*
+ * Misc
+*/
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+	behavior:url(/vendor/css/boxsizing.htc);
+}
+
+@mixin box-shadow($h-shadow, $v-shadow, $blur, $spread, $color) {
+	-moz-box-shadow: $h-shadow $v-shadow $blur $spread $color;
+	-webkit-box-shadow: $h-shadow $v-shadow $blur $spread $color;
+	box-shadow: $h-shadow $v-shadow $blur $spread $color;
+	behavior:url(/vendor/css/boxsizing.htc);
+}
+
+@mixin transit($property, $duration, $timing-function, $delay) {
+	-moz-transition: $property $duration $timing-function $delay;
+	-webkit-transition: $property $duration $timing-function $delay;
+	-o-transition: $property $duration $timing-function $delay;
+	-ms-transition: $property $duration $timing-function $delay;
+	transition: $property $duration $timing-function $delay;
+	behavior:url(/vendor/css/boxsizing.htc);
+}
+
+@mixin ellipsis() {
+	width: 100%; overflow: hidden; white-space: nowrap;  text-overflow: ellipsis;-o-text-overflow:ellipsis;-ms-text-overflow:ellipsis;
+}
