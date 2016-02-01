@@ -276,7 +276,7 @@ angular.module('assemblyKioskApp', [])
 
                 // 분석중
                 $scope.isLoading = true;
-                $scope.GoAnalyze();
+                $scope.GoAnalyze();x
 
                 $timeout(function() {
 

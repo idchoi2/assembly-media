@@ -56,8 +56,15 @@ var result9 = [1, 1, 0, 0, -1, 0, 1, 0, 0, 0, 0];
 
 var timer;
 var timeoutInterval = 60000; // 1000 = 1sec
+var forceCloseQ = 5;
+var forceTimer;
+var forceTimeoutInterval = 15000; // 1000 = 1sec
 
 var assmb = {};
+
+/**
+ * 자동 리셋
+ */
 assmb.autoReset = function() {
     timer = setTimeout(function(){
         setTimeout(function() {
@@ -66,7 +73,34 @@ assmb.autoReset = function() {
     },timeoutInterval);
 };
 
+/**
+ * 강제 종료 버튼
+ */
+assmb.forceClose = function() {
+    forceCloseQ = forceCloseQ - 1;
+    // console.log(forceCloseQ);
+    if(!forceCloseQ) {
+        if(confirm("해당 미디어를 종료하시겠습니까?")) {
 
+            // 강제 종료하는 스크립트
+            window.open('', '_self', '');
+            window.close();
+
+            // $("input").focus();
+        } else {
+            forceCloseQ = 5;
+        }
+    }
+};
+
+/**
+ * 15초동안 아무일이 없으면 강제 종료 타이머 초기화
+ */
+assmb.forceTimeout = function() {
+    forceTimer = setTimeout(function(){
+        forceCloseQ = 5;
+    },forceTimeoutInterval);
+};
 
 
 $(document).bind('contextmenu', function(e) {
