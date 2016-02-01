@@ -11,7 +11,7 @@
 	display: none !important;
 }
 
-* { cursor: none;outline:none; }
+* { cursor: none;outline:none;-webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 html {
 	-webkit-text-size-adjust: none;
@@ -103,17 +103,83 @@ ul {
 	margin: 0;
 }
 
-
+// 로딩
 .loading {
 	width: 100%;
 	height: 100%;
 	position: fixed;
 	left: 0;
 	top: 0;
-	background: $color-white url("../img/loading.gif") no-repeat center center;
+	background: $color-white url("../img/bg-loading.png") no-repeat center center;
 	display: none;
 	@include transit(all, 1s, ease-out, 0s);
+
+	.loading-prog {
+		width: 256px;
+		height: 88px;
+		position: absolute;
+		background: url("../img/loading.gif") no-repeat center center;
+		left: 50%;
+		top: 50%;
+		margin-left: -128px;
+		margin-top: -88px;
+	}
 }
 .loading.show {
+	display: block;
+}
+
+// 확인
+.confirm {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: url("../img/bg-confirm.png") no-repeat center center;
+	display: none;
+	@include transit(all, 1s, ease-out, 0s);
+
+	.confirm-inner {
+		width: 962px;
+		height: 608px;
+		position: absolute;
+		left: 480px;
+		top: 250px;
+
+		.btn-close {
+			@extend .btn;
+			width: 90px;
+			height: 90px;
+			position: absolute;
+			left: 744px;
+			top: 16px;
+			background: url("../img/btn-confirm-close.png") no-repeat center center;
+		}
+
+		.btn-confirm {
+			@extend .btn;
+			width: 260px;
+			height: 100px;
+		}
+
+		.btn-confirm-yes {
+			position: absolute;
+			left: 140px;
+			top: 340px;
+			background: url("../img/btn-confirm-yes.png") no-repeat center center;
+		}
+
+		.btn-confirm-no {
+			position: absolute;
+			left: 450px;
+			top: 340px;
+			background: url("../img/btn-confirm-no.png") no-repeat center center;
+		}
+	}
+
+
+}
+.confirm.show {
 	display: block;
 }

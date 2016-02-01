@@ -72,17 +72,19 @@
 
 
 			<!-- 결과 -->
-			<div class="r-wrap r-wrap-{{resultNo}}" ng-show="isFinished">
+			<div class="r-wrap r-wrap-{{resultNo}}" ng-class="{'ready': isFinished, 'show': isCompleted1, 'complete' : isCompleted2}" >
 
 			</div>
 			<!-- //결과 -->
 
 
-			<div class="restart-btn-wrap" ng-show="isFinished">
-				<button type="button" class="btn btn-restart" ng-click="GoHome(1)"></button>
+			<div class="restart-btn-wrap" ng-class="{'show' : isFinished && isCompleted3}">
+				<div class="btn-restart-wrap">
+					<button type="button" class="btn btn-restart" ng-click="ConfirmGoHome()"></button>
+				</div>
 			</div>
 			<div class="home-btn-wrap">
-				<button type="button" class="btn btn-home" ng-click="GoHome()"></button>
+				<button type="button" class="btn btn-home" ng-click="isConfirm = true"></button>
 			</div>
 			<div class="next-btn-wrap" ng-show="!isFinished">
 				<button type="button" class="btn btn-next" ng-click="GoNext()" ng-disabled="!answer || isClick"></button>
@@ -93,11 +95,11 @@
 
 
 		<!-- 현재 단계 표시-->
-		<div class="step-wrap">
+		<div class="step-wrap" ng-hide="isFinished">
 			<div class="step-list-wrap">
 				<ul id="step-list">
 					<li class="step-start"></li>
-					<li ng-repeat="step in stepSts track by $index"><button type="button" class="btn btn-step btn-step-{{ $index + 1 }}" ng-click="GoStep($index)" ng-class="{'active' : curStep === ($index + 1), 'completed': stepSts[$index] !== null}" ng-disabled="isFinished || (stepSts[$index] === 0)"></button></li>
+					<li ng-repeat="step in stepSts track by $index"><button type="button" class="btn btn-step btn-step-{{ $index + 1 }}" ng-click="GoStep($index)" ng-class="{'active' : curStep === ($index + 1), 'completed': stepSts[$index] !== null}" ng-disabled="isFinished || (stepSts[$index] === null)"></button></li>
 					<li class="step-end"></li>
 				</ul>
 			</div>
@@ -107,7 +109,18 @@
 
 
 
-	<div class="loading" ng-class="{'show' : isLoading}"></div>
+	<div class="loading" ng-class="{'show' : isLoading}">
+		<div class="loading-prog"></div>
+	</div>
+
+	<div class="confirm" ng-class="{'show' : isConfirm}">
+		<div class="confirm-inner">
+			<button type="button" class="btn btn-close" ng-click="isConfirm = false;"></button>
+
+			<button type="button" class="btn btn-confirm btn-confirm-yes" ng-click="GoHome(1)"></button>
+			<button type="button" class="btn btn-confirm btn-confirm-no" ng-click="isConfirm = false;"></button>
+		</div>
+	</div>
 </div>
 </body>
 </html>

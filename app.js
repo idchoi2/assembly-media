@@ -11,11 +11,16 @@ angular.module('assemblyKioskApp', [])
             $scope.isALoad = false;
             $scope.curPage = 1;
             $scope.curStep = 1;
+            //$scope.stepSts = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
             $scope.stepSts = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
             $scope.answer = false;
             $scope.isFinished = false;
+            $scope.isCompleted1 = false;
+            $scope.isCompleted2 = false;
+            $scope.isCompleted3 = false;
             $scope.isLoading = false;
             $scope.isClick = false;
+            $scope.isConfirm = false;
             $scope.resultNo = 0;
         };
 
@@ -257,8 +262,6 @@ angular.module('assemblyKioskApp', [])
                     candt.push(9);
                 }
 
-                console.log(candt);
-
                 $scope.resultNo = candt[Math.floor((Math.random() * candt.length) + 1) - 1];
             };
         };
@@ -281,11 +284,26 @@ angular.module('assemblyKioskApp', [])
                     $scope.isFinished = true;
                     //$scope.stepSts[$scope.stepSts.length - 1] = 1;
 
-                }, 2000);
+                    $timeout(function() {
+                        $scope.isCompleted1 = true;
 
+                        $timeout(function() {
+                            $scope.isCompleted2 = true;
 
+                            $timeout(function() {
+                                $scope.isCompleted3 = true;
+                            }, 1000);
+                        }, 1000);
+                    }, 1000);
 
+                }, 3000);
             }, 3000);
+        };
+
+        $scope.ConfirmGoHome = function() {
+            $timeout(function() {
+                $scope.isConfirm = true;
+            }, 1000);
         };
 
         /**

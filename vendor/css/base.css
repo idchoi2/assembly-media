@@ -28,7 +28,8 @@
 
 * {
   cursor: none;
-  outline: none; }
+  outline: none;
+  -webkit-tap-highlight-color: transparent; }
 
 html {
   -webkit-text-size-adjust: none;
@@ -98,7 +99,7 @@ button::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-.btn {
+.btn, .confirm .confirm-inner .btn-close, .confirm .confirm-inner .btn-confirm {
   display: inline-block;
   background: none;
   border: none;
@@ -119,7 +120,7 @@ ul {
   position: fixed;
   left: 0;
   top: 0;
-  background: #FFF url("../img/loading.gif") no-repeat center center;
+  background: #FFF url("../img/bg-loading.png") no-repeat center center;
   display: none;
   -moz-transition: all 1s ease-out 0s;
   -webkit-transition: all 1s ease-out 0s;
@@ -127,8 +128,61 @@ ul {
   -ms-transition: all 1s ease-out 0s;
   transition: all 1s ease-out 0s;
   behavior: url(/vendor/css/boxsizing.htc); }
+  .loading .loading-prog {
+    width: 256px;
+    height: 88px;
+    position: absolute;
+    background: url("../img/loading.gif") no-repeat center center;
+    left: 50%;
+    top: 50%;
+    margin-left: -128px;
+    margin-top: -88px; }
 
 .loading.show {
+  display: block; }
+
+.confirm {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: url("../img/bg-confirm.png") no-repeat center center;
+  display: none;
+  -moz-transition: all 1s ease-out 0s;
+  -webkit-transition: all 1s ease-out 0s;
+  -o-transition: all 1s ease-out 0s;
+  -ms-transition: all 1s ease-out 0s;
+  transition: all 1s ease-out 0s;
+  behavior: url(/vendor/css/boxsizing.htc); }
+  .confirm .confirm-inner {
+    width: 962px;
+    height: 608px;
+    position: absolute;
+    left: 480px;
+    top: 250px; }
+    .confirm .confirm-inner .btn-close {
+      width: 90px;
+      height: 90px;
+      position: absolute;
+      left: 744px;
+      top: 16px;
+      background: url("../img/btn-confirm-close.png") no-repeat center center; }
+    .confirm .confirm-inner .btn-confirm {
+      width: 260px;
+      height: 100px; }
+    .confirm .confirm-inner .btn-confirm-yes {
+      position: absolute;
+      left: 140px;
+      top: 340px;
+      background: url("../img/btn-confirm-yes.png") no-repeat center center; }
+    .confirm .confirm-inner .btn-confirm-no {
+      position: absolute;
+      left: 450px;
+      top: 340px;
+      background: url("../img/btn-confirm-no.png") no-repeat center center; }
+
+.confirm.show {
   display: block; }
 
 /*# sourceMappingURL=base.css.map */
