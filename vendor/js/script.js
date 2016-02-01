@@ -115,6 +115,8 @@ $(document).bind("click", function(e) {
     e.preventDefault();
     clearTimeout(timer);
     assmb.autoReset();
+
+    assmb.forceTimeout();
 });
 
 $('html').bind("mousewheel DOMMouseScroll", function(e) {
