@@ -185,4 +185,12 @@ ul {
 .confirm.show {
   display: block; }
 
+#btn-close {
+  position: fixed;
+  top: 00px;
+  left: 00px;
+  width: 120px;
+  height: 120px;
+  opacity: 0.5; }
+
 /*# sourceMappingURL=base.css.map */

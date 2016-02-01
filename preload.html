@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="assemblyKioskApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="assemblyKioskApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="assemblyKioskApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="assemblyKioskApp" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="국회 미디어">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta name="author" content="Rebel9" />
+	<meta name="robots" content="noindex, nofollow" />
+	<title>국회 미디어</title>
+
+
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+	<link rel="stylesheet" href="vendor/css/style.css">
+	<!-- CSS -->
+
+
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="vendor/js/script.js"></script>
+	<script src="app.js"></script>
+
+
+
+</head>
+<body ng-controller="MainCtrl" ng-init="init()">
+<div id="wrapper">
+
+	<div ng-repeat="item in [1, 2, 3, 4, 5, 6, 7, 8, 9]">
+		<img ng-src="vendor/img/bg-result-{{item}}.png">
+		<img ng-src="vendor/img/bg-result-{{item}}-complete.png">
+	</div>
+
+
+	<div ng-repeat="step in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]">
+		<img ng-src="vendor/img/bg-q-{{step}}.png">
+		<img ng-src="vendor/img/bg-step-{{step}}.png">
+		<img ng-src="vendor/img/btn-bottom-step-{{step}}-acitve.png">
+		<img ng-src="vendor/img/btn-bottom-step-{{step}}.png">
+	</div>
+
+</div>
+</body>
+</html>
