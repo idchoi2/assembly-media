@@ -11,8 +11,8 @@ angular.module('assemblyKioskApp', [])
             $scope.isALoad = false;
             $scope.curPage = 1;
             $scope.curStep = 1;
-            //$scope.stepSts = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-            $scope.stepSts = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+            $scope.stepSts = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+            //$scope.stepSts = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
             $scope.answer = false;
             $scope.isFinished = false;
             $scope.isCompleted1 = false;
@@ -277,8 +277,10 @@ angular.module('assemblyKioskApp', [])
                 // 분석중
                 $scope.isLoading = true;
                 $scope.GoAnalyze();
+                $scope.curStep = 9999;
 
                 $timeout(function() {
+
 
                     $scope.isLoading = false;
                     $scope.isFinished = true;

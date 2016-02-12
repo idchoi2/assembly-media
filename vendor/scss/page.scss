@@ -141,7 +141,7 @@
 
 		// 다음 버튼
 		.next-btn-wrap {
-			width: 320px;
+			width: 335px;
 			height: 330px;
 			position: fixed;
 			top: 435px;
@@ -151,7 +151,7 @@
 			.btn-next {
 				position: absolute;
 				bottom: 0;
-				left: 0;
+				left: 15px;
 				width: 170px;
 				height: 170px;
 				background: url("../img/btn-next-active.png") no-repeat center center;
@@ -164,10 +164,11 @@
 				background: url("../img/btn-next.png") no-repeat center center;
 			}
 			@-webkit-keyframes btn-next-pulse {
-				0% {background: url("../img/btn-next.png") no-repeat center center;}
-				50% {background: url("../img/btn-next-active.png") no-repeat center center;}
-				100% {background: url("../img/btn-next.png") no-repeat center center;}
+				0% {background: url("../img/btn-next.png") no-repeat center center; left: 15px;}
+				50% {background: url("../img/btn-next-active.png") no-repeat center center; left: 0;}
+				100% {background: url("../img/btn-next.png") no-repeat center center; left: 15px;}
 			}
+
 		}
 
 		// 다시 해보기
@@ -326,6 +327,12 @@
 	}
 	.q-outer-wrap.q-outer-15 {
 		background: url("../img/bg-step-15.png") no-repeat right top;
+	}
+	.q-outer-wrap.q-outer-16 {
+		background: url("../img/bg-step-15.png") no-repeat right top;
+	}
+	.q-outer-wrap.q-outer-9999 {
+		background: url("../img/bg-result.png") no-repeat right top;
 	}
 
 }
