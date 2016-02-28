@@ -23,11 +23,11 @@
   position: absolute;
   left: -1440px;
   top: -570px;
-  -moz-transition: all 0.5s ease-out 0s;
-  -webkit-transition: all 0.5s ease-out 0s;
-  -o-transition: all 0.5s ease-out 0s;
-  -ms-transition: all 0.5s ease-out 0s;
-  transition: all 0.5s ease-out 0s;
+  -moz-transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out 0s;
+  -o-transition: all 0.2s ease-out 0s;
+  -ms-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
   behavior: url(/vendor/css/boxsizing.htc); }
 
 .q-wrap.load {

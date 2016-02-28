@@ -113,5 +113,23 @@
       .step-wrap .step-list-wrap #step-list li.step-end {
         width: 60px;
         background: url("../img/icon-bottom-right.png") no-repeat center center; }
+  .step-wrap .btn-step-nav {
+    width: 160px;
+    height: 80px;
+    display: inline-block;
+    position: absolute;
+    bottom: 20px; }
+  .step-wrap .btn-step-nav.prev {
+    left: 85px;
+    background: url("../img/btn-step-prev.png") no-repeat center center; }
+  .step-wrap .btn-step-nav.prev:active {
+    background: url("../img/btn-step-prev-active.png") no-repeat center center; }
+  .step-wrap .btn-step-nav.next {
+    right: 85px;
+    background: url("../img/btn-step-next.png") no-repeat center center; }
+  .step-wrap .btn-step-nav.next:active {
+    background: url("../img/btn-step-next-active.png") no-repeat center center; }
+  .step-wrap .btn-step-nav:disabled {
+    opacity: 0.2; }
 
 /*# sourceMappingURL=step.css.map */

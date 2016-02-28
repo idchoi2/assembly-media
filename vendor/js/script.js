@@ -30,26 +30,26 @@ Object.defineProperty(Array.prototype, "equals", {enumerable: false});
 
 
 
-var result1Cmpr = [0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0];
-var result2Cmpr = [0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0];
-var result3Cmpr = [1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0];
-var result4Cmpr = [1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0];
-var result5Cmpr = [0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0];
-var result6Cmpr = [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0];
-var result7Cmpr = [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1];
-var result8Cmpr = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0];
-var result9Cmpr = [1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0];
+var result1Cmpr = [0, 1, 1, 0, 0, 0, 0, 0, 0, 0];
+var result2Cmpr = [0, 1, 0, 1, 0, 0, 0, 0, 0, 0];
+var result3Cmpr = [1, 0, 0, 0, 0, 0, 0, 1, 0, 0];
+var result4Cmpr = [1, 0, 1, 0, 0, 0, 0, 0, 0, 0];
+var result5Cmpr = [0, 0, 0, 1, 0, 0, 0, 0, 1, 0];
+var result6Cmpr = [1, 0, 0, 1, 0, 0, 0, 0, 0, 0];
+var result7Cmpr = [0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
+var result8Cmpr = [0, 0, 1, 0, 0, 1, 0, 0, 0, 0];
+var result9Cmpr = [1, 1, 0, 0, 0, 1, 0, 0, 0, 0];
 
 
-var result1 = [0, 1, 1, 0, 0, 0, 0, 0, 0, -1, 0];
-var result2 = [0, 1, 1, 0, 0, 0, 0, 0, 1, 0, -1];
-var result3 = [1, 0, 1, 0, 0, 0, -1, 1, 1, 0, 0];
-var result4 = [1, 0, 1, -1, 0, 0, 0, 0, 1, 0, 0];
-var result5 = [0, 1, 0, 1, 0, 0, 0, -1, 0, 1, 0];
-var result6 = [1, 0, 0, 1, 0, -1, 0, 0, 0, 0, 0];
-var result7 = [0, 0, 0, 0, 1, 0, 0, 0, -1, 0, 1];
-var result8 = [1, -1, 0, 0, 0, 1, 0, 0, 0, 0, 0];
-var result9 = [1, 1, 0, 0, -1, 0, 1, 0, 0, 0, 0];
+var result1 = [0, 1, 1, 0, 0, 0, 0, 0, 0, -5];
+var result2 = [0, 1, 0, 1, 0, 0, 0, -5, 0, 0];
+var result3 = [1, 0, 0, 0, 0, 0, 0, 5, 0, 0];
+var result4 = [1, 0, 1, -5, 0, 0, 0, 0, 0, 0];
+var result5 = [0, 0, 0, 1, 0, 0, 0, 0, 5, 0];
+var result6 = [1, 0, 0, 1, -5, 0, 0, 0, 0, 0];
+var result7 = [0, 0, 0, 0, 1, 0, 0, 0, 0, 5];
+var result8 = [0, -5, 1, 0, 0, 1, 0, 0, 0, 0];
+var result9 = [1, 1, 0, 0, 0, 5, 0, 0, 0, 0];
 
 
 

@@ -62,10 +62,10 @@
 			<!-- 답변 버튼 -->
 			<div class="a-wrap" ng-class="{'load' : isALoad}" ng-show="!isFinished">
 				<div class="answer-y-wrap">
-					<button type="button" class="btn btn-answer btn-answer-y" ng-click="SetAnswer('yes');" ng-class="{'set' : answer === 'yes'}"></button>
+					<button type="button" class="btn btn-answer btn-answer-y" ng-disabled="answer" ng-click="SetAnswer('yes');" ng-class="{'set' : answer === 'yes'}"></button>
 				</div>
 				<div class="answer-n-wrap">
-					<button type="button" class="btn btn-answer btn-answer-n" ng-click="SetAnswer('no');" ng-class="{'set' : answer === 'no'}"></button>
+					<button type="button" class="btn btn-answer btn-answer-n" ng-disabled="answer" ng-click="SetAnswer('no');" ng-class="{'set' : answer === 'no'}"></button>
 				</div>
 			</div>
 			<!-- //답변 버튼 -->
@@ -86,9 +86,11 @@
 			<div class="home-btn-wrap">
 				<button type="button" class="btn btn-home" ng-click="isConfirm = true"></button>
 			</div>
+			<!--
 			<div class="next-btn-wrap" ng-show="!isFinished">
 				<button type="button" class="btn btn-next" ng-click="GoNext()" ng-disabled="!answer || isClick"></button>
 			</div>
+			-->
 		</div>
 
 
@@ -99,10 +101,12 @@
 			<div class="step-list-wrap">
 				<ul id="step-list">
 					<li class="step-start"></li>
-					<li ng-repeat="step in stepSts track by $index"><button type="button" class="btn btn-step btn-step-{{ $index + 1 }}" ng-click="GoStep($index)" ng-class="{'active' : curStep === ($index + 1), 'completed': stepSts[$index] !== null}" ng-disabled="isFinished || (stepSts[$index] === null)"></button></li>
+					<li ng-repeat="step in stepSts track by $index"><button type="button" class="btn btn-step btn-step-{{ $index + 1 }}" ng-click="GoStep($index)" ng-class="{'active' : curStep === ($index + 1), 'completed': stepSts[$index] !== null}" ng-disabled="!(isQLoad && isALoad) || isFinished || (stepSts[$index] === null)"></button></li>
 					<li class="step-end"></li>
 				</ul>
 			</div>
+			<button type="button" class="btn-step-nav prev" ng-disabled="!(isQLoad && isALoad) || stepSts[0] === null || curStep === 1" ng-click="GoStep(curStep - 2)"></button>
+			<button type="button" class="btn-step-nav next" ng-disabled="!(isQLoad && isALoad) || stepSts[curStep - 1] === null" ng-click="GoStep(curStep)"></button>
 		</div>
 		<!-- //현재 단계 표시-->
 	</div>
@@ -124,5 +128,23 @@
 </div>
 
 <div id="btn-close" onclick="assmb.forceClose();"></div>
+
+
+<div id="img-loader">
+
+	<div ng-repeat="item in [1, 2, 3, 4, 5, 6, 7, 8, 9]">
+		<img ng-src="vendor/img/bg-result-{{item}}.png">
+		<img ng-src="vendor/img/bg-result-{{item}}-complete.png">
+	</div>
+
+
+	<div ng-repeat="step in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]">
+		<img ng-src="vendor/img/bg-q-{{step}}.png">
+		<img ng-src="vendor/img/bg-step-{{step}}.png">
+		<img ng-src="vendor/img/btn-bottom-step-{{step}}-acitve.png">
+		<img ng-src="vendor/img/btn-bottom-step-{{step}}.png">
+	</div>
+
+</div>
 </body>
 </html>

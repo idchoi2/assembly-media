@@ -11,8 +11,8 @@ angular.module('assemblyKioskApp', [])
             $scope.isALoad = false;
             $scope.curPage = 1;
             $scope.curStep = 1;
-            $scope.stepSts = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-            //$scope.stepSts = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+            //$scope.stepSts = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+            $scope.stepSts = [null, null, null, null, null, null, null, null, null, null];
             $scope.answer = false;
             $scope.isFinished = false;
             $scope.isCompleted1 = false;
@@ -31,6 +31,9 @@ angular.module('assemblyKioskApp', [])
          */
         $scope.SetAnswer = function(answer) {
             $scope.answer = answer;
+            $timeout(function() {
+                $scope.GoNext();
+            }, 200);
         };
 
         /**
@@ -132,11 +135,6 @@ angular.module('assemblyKioskApp', [])
                 $scope.stepSts[8] = Math.round(Math.random() * 1);
                 $scope.stepSts[9] = Math.round(Math.random() * 1);
                 $scope.stepSts[10] = Math.round(Math.random() * 1);
-                $scope.stepSts[11] = Math.round(Math.random() * 1);
-                $scope.stepSts[12] = Math.round(Math.random() * 1);
-                $scope.stepSts[13] = Math.round(Math.random() * 1);
-                $scope.stepSts[14] = Math.round(Math.random() * 1);
-                $scope.stepSts[15] = Math.round(Math.random() * 1);
 
 
                 $scope.GoAnalyze();
@@ -151,6 +149,7 @@ angular.module('assemblyKioskApp', [])
         $scope.GoAnalyze = function() {
 
             // 2가지 이상 결과
+            /*
             if($scope.stepSts[0] !== 1 || $scope.stepSts[1] !== 1) {
                 $scope.stepSts[0] = 0;
             }
@@ -170,9 +169,7 @@ angular.module('assemblyKioskApp', [])
                 $scope.stepSts[6] = 0;
             }
             $scope.stepSts.splice(6, 1);
-
-
-
+            */
 
 
 

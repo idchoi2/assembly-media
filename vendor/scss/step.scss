@@ -136,4 +136,30 @@
 
 		}
 	}
+
+
+	.btn-step-nav {
+		width: 160px;
+		height: 80px;
+		display: inline-block;
+		position: absolute;
+		bottom: 20px;
+	}
+	.btn-step-nav.prev {
+		left: 85px;
+		background: url("../img/btn-step-prev.png") no-repeat center center;
+	}
+	.btn-step-nav.prev:active {
+		background: url("../img/btn-step-prev-active.png") no-repeat center center;
+	}
+	.btn-step-nav.next {
+		right: 85px;
+		background: url("../img/btn-step-next.png") no-repeat center center;
+	}
+	.btn-step-nav.next:active {
+		background: url("../img/btn-step-next-active.png") no-repeat center center;
+	}
+	.btn-step-nav:disabled {
+		opacity: 0.2;
+	}
 }

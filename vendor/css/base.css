@@ -185,6 +185,10 @@ ul {
 .confirm.show {
   display: block; }
 
+#img-loader {
+  position: absolute;
+  top: 9999px; }
+
 #btn-close {
   position: fixed;
   top: 00px;
