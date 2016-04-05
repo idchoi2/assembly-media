@@ -95,11 +95,11 @@
         position: absolute;
         top: 0;
         left: 0;
-        -moz-transition: all 0.3s ease-out 0s;
-        -webkit-transition: all 0.3s ease-out 0s;
-        -o-transition: all 0.3s ease-out 0s;
-        -ms-transition: all 0.3s ease-out 0s;
-        transition: all 0.3s ease-out 0s;
+        -moz-transition: all 0.2s ease-out 0s;
+        -webkit-transition: all 0.2s ease-out 0s;
+        -o-transition: all 0.2s ease-out 0s;
+        -ms-transition: all 0.2s ease-out 0s;
+        transition: all 0.2s ease-out 0s;
         behavior: url(/vendor/css/boxsizing.htc); }
       #page-2 .q-outer-wrap .a-wrap .answer-y-wrap .btn-answer-y.set {
         top: -50px;
@@ -118,11 +118,11 @@
         position: absolute;
         top: 0;
         left: 0;
-        -moz-transition: all 0.3s ease-out 0s;
-        -webkit-transition: all 0.3s ease-out 0s;
-        -o-transition: all 0.3s ease-out 0s;
-        -ms-transition: all 0.3s ease-out 0s;
-        transition: all 0.3s ease-out 0s;
+        -moz-transition: all 0.2s ease-out 0s;
+        -webkit-transition: all 0.2s ease-out 0s;
+        -o-transition: all 0.2s ease-out 0s;
+        -ms-transition: all 0.2s ease-out 0s;
+        transition: all 0.2s ease-out 0s;
         behavior: url(/vendor/css/boxsizing.htc); }
       #page-2 .q-outer-wrap .a-wrap .answer-n-wrap .btn-answer-n.set {
         top: -50px;

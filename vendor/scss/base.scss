@@ -29,7 +29,7 @@ body {
 	font-smoothing: antialiased;
 	-webkit-font-smoothing: antialiased;
 	color: $color-black;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 a {
@@ -123,6 +123,15 @@ ul {
 		top: 50%;
 		margin-left: -128px;
 		margin-top: -88px;
+	}
+
+	.loading-bar {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 80px;
+		margin-top: -42px;
+		margin-left: -40px;
 	}
 }
 .loading.show {

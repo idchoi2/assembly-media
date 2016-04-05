@@ -94,12 +94,12 @@ angular.module('assemblyKioskApp', [])
                                     // 답변 In
                                     $scope.isALoad = true;
 
-                                }, 500);
+                                }, 300);
                             }
 
-                        }, 500);
-                    }, 500);
-                }, 500);
+                        }, 300);
+                    }, 300);
+                }, 300);
             }
 
 
